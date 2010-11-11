@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Web Developer Express 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3CEAA0D-6E75-4C90-99FB-3518FE19F593}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{D54C4B91-FFC1-4ABC-835F-F6A7F0617EDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3143CC2F-7588-4FA5-B21D-A496338CEC66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop Applications", "Desktop Applications", "{FDDD6046-AE96-4FC6-8B06-98B7110AF772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinDin.Core", "DinDin.Core\DinDin.Core.csproj", "{5EAD8184-724E-446C-AAC7-AADE11357791}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinDin.Core.Tests", "DinDin.Core\Tests\DinDin.Core.Tests.csproj", "{F27461BD-7EB3-4836-9133-E442A8DA4913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinDin.Desktop", "DinDin.Desktop\DinDin.Desktop.csproj", "{2F792702-F2B4-4CC7-9D3D-73E793B31CB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F27461BD-7EB3-4836-9133-E442A8DA4913} = {F27461BD-7EB3-4836-9133-E442A8DA4913}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinDin.Repository.Native", "DinDin.Repository.Native\DinDin.Repository.Native.csproj", "{3CE5E9BB-15BA-47F3-A4FD-6BD045E6A381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependencies", "Dependencies\Dependencies.csproj", "{A2BE24C7-DA43-4935-BAEE-8CA52BCB5482}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DinDin.Repository.Native.Tests", "DinDin.Repository.Native\Tests\DinDin.Repository.Native.Tests.csproj", "{7569EE0B-A89E-4DCA-802A-BDC7D1C82314}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAD8184-724E-446C-AAC7-AADE11357791}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAD8184-724E-446C-AAC7-AADE11357791}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAD8184-724E-446C-AAC7-AADE11357791}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAD8184-724E-446C-AAC7-AADE11357791}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27461BD-7EB3-4836-9133-E442A8DA4913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27461BD-7EB3-4836-9133-E442A8DA4913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27461BD-7EB3-4836-9133-E442A8DA4913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27461BD-7EB3-4836-9133-E442A8DA4913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F792702-F2B4-4CC7-9D3D-73E793B31CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F792702-F2B4-4CC7-9D3D-73E793B31CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F792702-F2B4-4CC7-9D3D-73E793B31CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F792702-F2B4-4CC7-9D3D-73E793B31CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE5E9BB-15BA-47F3-A4FD-6BD045E6A381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE5E9BB-15BA-47F3-A4FD-6BD045E6A381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE5E9BB-15BA-47F3-A4FD-6BD045E6A381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE5E9BB-15BA-47F3-A4FD-6BD045E6A381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BE24C7-DA43-4935-BAEE-8CA52BCB5482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BE24C7-DA43-4935-BAEE-8CA52BCB5482}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{7569EE0B-A89E-4DCA-802A-BDC7D1C82314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7569EE0B-A89E-4DCA-802A-BDC7D1C82314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7569EE0B-A89E-4DCA-802A-BDC7D1C82314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7569EE0B-A89E-4DCA-802A-BDC7D1C82314}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
