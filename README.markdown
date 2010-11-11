@@ -1,7 +1,7 @@
 # DinDin
 ## Multiplatform Home Finance Distributed System
 
-Previously at [[http://code.google.com/p/din-din]]
+Previously at http://code.google.com/p/din-din
 
 This is a project aiming to develop a Home Finance system that is distributed meaning that it can accept transactions from many devices even when they are offline.
 
