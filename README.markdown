@@ -5,9 +5,9 @@ Previously at http://code.google.com/p/din-din
 
 This is a project aiming to develop a Home Finance system that is distributed meaning that it can accept transactions from many devices even when they are offline.
 
-The devices can be wildly diverse, from smartphones to linux/macosx/windows netbooks/notebooks/desktops so the system is also multi-platform.
+The devices can be wildly diverse, from smartphones/tablets to linux/macosx/windows netbooks/notebooks/desktops so the system is also multi-platform.
 
-Most of the code will be in C#(Mono/.NET) with parts running in the Web and so using HTML/Javascript in an AJAX fashion, but eventually Moonlight/Silverlight.
+Most of the code will be in C#(Mono/.NET) with parts running in the Web and so using HTML5/AJAX.
 
 ## License: BSD
 
