@@ -6,5 +6,6 @@ obj/
 *.userprefs
 *.pidb
 test-results/
+packages/
 
 
