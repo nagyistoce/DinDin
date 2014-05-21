@@ -1,13 +1,17 @@
-﻿body, input, button {
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+﻿@import url(http://fonts.googleapis.com/css?family=Architects+Daughter|Ceviche+One);
+
+body * {
+    font-family: 'Architects Daughter', Verdana, Helvetica, Sans-Serif;
+}
+
+body, input, button {
+    font-family: 'Architects Daughter', Verdana, Helvetica, Sans-Serif;
     font-size: 1.2em;
 }
 
 body {
     background-color: #fff;
     color: #333;
-    max-width: 980px; /*Remove this to make it full screen*/
-    margin: 2px auto;
 }
 
 button, input[type=submit] {
@@ -41,16 +45,26 @@ header {
 
 #userSettings {
     display: none;
-    position:static;
+    position: static;
     float: right;
 }
 
 #headline {
-    background-color: ghostwhite;
     display: block;
-    height:16px;
-    overflow-y:visible;
+    overflow-y: visible;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
+
+    #headline::before {
+        content: 'DinDin';
+        font-family: 'Ceviche One';
+        font-size: 40pt;
+        text-shadow: 2px 2px 3px darkorange;
+        color: cadetblue;
+    }
 
     #headline:hover {
         background-color: ghostwhite;
@@ -71,11 +85,14 @@ header {
 
 #menu {
     list-style-type: none;
-    padding: 0;
+    padding: 4px;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
 }
 
     #menu li {
         display: inline-block;
+        vertical-align: middle;
     }
 
         #menu li:not(:first-child) {
@@ -110,21 +127,17 @@ header {
         margin-bottom: .8em;
     }
 
-#registerPanel {
-    display: none;
-    position: relative;
-    float: left;
-    text-align: left;
-    padding: 25px;
-}
 
+#registerPanel,
 #loginPanel {
     display: block;
-    position: relative;
-    float: left;
     text-align: left;
     padding: 25px;
-    width: 600px;
+    margin: 0 auto;
+}
+
+#registerPanel {
+    display: none;
 }
 
     #registerPanel h2,
@@ -146,9 +159,7 @@ header {
     }
 
 #localLoginPanel {
-    border-right: solid 2px #c8c8c8;
     float: left;
-    width: 45%;
     text-align: left;
 }
 
@@ -208,7 +219,6 @@ ol.round {
 
 #main-content {
     min-height: 400px;
-    text-align: center;
 }
 
 /*#region info and errors */
@@ -217,6 +227,7 @@ ol.round {
     color: red;
     padding-left: .5em;
     vertical-align: top;
+    margin: 0;
 }
 
 .validation-summary-errors {
@@ -266,19 +277,89 @@ ol.round {
 
 footer {
     clear: both;
-    margin: 5em 5em .7em 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: cadetblue;
+    font-size: 13pt;
+    color: snow;
+    font-weight: bold;
+    height: 32px;
+    vertical-align: middle;
 }
 
+    footer > p {
+        margin-top: 6px;
+        font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+        font-weight: normal;
+        font-size: 11pt;
+    }
+
+    footer > nav {
+        display: inline-block;
+        position: absolute;
+        left: 18px;
+        top: -3px;
+    }
+
+        footer > nav a {
+            color: gainsboro;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 60px;
+            padding: 3px 6px;
+        }
+
+            footer > nav a:hover {
+                background-color: gainsboro;
+                color: cadetblue;
+                border-radius: 8px 8px;
+            }
 /*#endregion */
 
-@media only screen and (max-width: 600px) {
+button.minibutton {
+    display: inline-block;
+    float: right;
+    font-family: 'Architects Daughter', Verdana, Helvetica, Sans-Serif;
+    font-size: 0.6em;
+}
 
-    body {
-        margin: .2em 0;
-    }
+.ui-state-active {
+    background-color: crimson;
+    color: white;
+    background-image: none;
+    font-weight: bold;
+}
+
+.ui-accordion .ui-accordion-header {
+    padding-left: 36px;
+    text-align: left;
+}
+
+#body {
+    position: fixed;
+    top: 56px;
+    bottom: 33px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+
+#accordion {
+    height: 100%;
+}
+
+@media only screen and (max-width: 640px) {
 
     header {
         text-align: center;
         clear: both;
+        min-height: 56px;
+    }
+
+    footer {
+        text-align: right;
     }
 }

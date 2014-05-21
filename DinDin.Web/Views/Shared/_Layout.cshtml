@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - DinDin</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Architects+Daughter|Ceviche+One">
     <link href="~/favicon.png" rel="shortcut icon" type="image/png" />
     <meta name="viewport" content="width=device-width" />
-    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("~/Content/css")
 </head>
 <body>
     <div id="headline">
@@ -27,7 +28,6 @@
                 <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
             </ul>
         </nav>
-        <p>Learn more about <a href="http://go.microsoft.com/fwlink/?LinkId=273732">Single Page Applications</a></p>
         <p>&copy; @DateTime.Now.Year - DinDin Development Team</p>
     </footer>
 

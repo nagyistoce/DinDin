@@ -1,8 +1,7 @@
 .todoList {
-    font-family: 'Buxton Sketch','Comic Sans MS', cursive;
     position: relative;
     width: 280px;
-    min-height: 280px;
+    min-height: 200px;
     display: inline-block;
     margin: 1em;
     padding-top: 8px;
