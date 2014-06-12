@@ -1,15 +1,15 @@
 .todoList {
     position: relative;
-    width: 280px;
-    min-height: 200px;
+    width: 380px;
+    min-height: 300px;
     display: inline-block;
-    margin: 1em;
+    margin: 0 1em 0.5em 0;
     padding-top: 8px;
     text-align: center;
     -moz-box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
     box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.22);
-    background-color: #f16320;
+    background-color: lightgoldenrodyellow;
     vertical-align: top;
 }
 
@@ -39,7 +39,7 @@
             text-align: center;
             width: 95%;
             font-size: 1.8em;
-            color: beige;
+            color: navy;
         }
 
     .todoList ul {
@@ -52,29 +52,30 @@
     padding: 0;
     margin-left: 25px;
     display: block;
-    color: khaki;
+    color: darkslateblue;
 }
 
     .addTodo::-webkit-input-placeholder {
-        color: burlywood;
+        color: dodgerblue;
     }
 
     .addTodo::-moz-placeholder {
-        color: burlywood;
+        color: dodgerblue;
     }
     /* firefox 19+ */
     .addTodo:-ms-input-placeholder {
-        color: burlywood;
+        color: dodgerblue;
     }
 /* ie */
 input.addTodo:-moz-placeholder {
-    color: burlywood;
+    color: dodgerblue;
 }
 
-.todoList input[type=text], .addTodo {
-    width: 200px;
+.todoList input[type=text], .todoList textarea, .addTodo {
+    width: 300px;
     border: none;
     background: none;
+    font-family: inherit;
 }
 
 .todoList input[disabled] {
@@ -106,4 +107,9 @@ input.addTodo:-moz-placeholder {
 
 .todoItemInput::-ms-clear {
     display: none;
+}
+
+a.killer {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 11pt;
 }

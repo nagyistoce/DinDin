@@ -13,5 +13,20 @@ namespace DinDin.Web.Controllers
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
+
+        public ActionResult ToDo()
+        {
+            return View();
+        }
+
+        public ActionResult Balance()
+        {
+            return View();
+        }
+
+        public ActionResult Expenses()
+        {
+            return View();
+        }
     }
 }

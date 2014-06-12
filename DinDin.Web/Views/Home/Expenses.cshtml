@@ -1,0 +1,12 @@
+﻿@model DinDin.Web.Models.LoginModel
+@if (@User.Identity.IsAuthenticated)
+{
+    <div style="min-height: 300px">
+        <button data-bind="click: addTodoList" class="minibutton">Add Expense</button>
+    </div>    
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/todo")
+    }
+}

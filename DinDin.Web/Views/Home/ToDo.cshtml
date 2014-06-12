@@ -1,0 +1,56 @@
+﻿@model DinDin.Web.Models.LoginModel
+@{
+    ViewBag.Title = "DinDin";
+}
+@functions{
+    public string GetAntiForgeryToken()
+    {
+        string cookieToken, formToken;
+        AntiForgery.GetTokens(null, out cookieToken, out formToken);
+        return cookieToken + ":" + formToken;
+    }
+}
+
+<div id="main-content">
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <div style="min-height: 300px">
+            <button data-bind="click: addTodoList" class="minibutton">Add Todo list</button>
+            <p class="error" data-bind="text: error"></p>
+            <section id="lists" data-bind="foreach: todoLists, visible: todoLists().length > 0">
+                <article class="todoList">
+                    <header>
+                        <form data-bind="validate: true">
+                            <input class="required" data-bind="value: title, selected: isEditingListTitle, blurOnEnter: true" />
+                        </form>
+                    </header>
+
+                    <a href="#" class="deletelist killer" data-bind="click: $parent.deleteTodoList">X</a>
+
+                    <ul data-bind="foreach: todos">
+                        <li>
+                            <input type="checkbox" data-bind="checked: isDone" />
+                            <input class="todoItemInput" type="text" data-bind="value: title, disable: isDone, blurOnEnter: true" />
+                            <a href="#" data-bind="click: $parent.deleteTodo" class="killer">X</a>
+                            <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
+                        </li>
+                    </ul>
+
+                    <form data-bind="submit: addTodo">
+                        <input class="addTodo" type="text" data-bind="value: newTodoTitle, placeholder: 'Type here to add', blurOnEnter: true, event: { blur: addTodo }" />
+                    </form>
+
+                    <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
+                </article>
+            </section>
+        </div>    
+    }
+</div>
+@if (@User.Identity.IsAuthenticated)
+{
+    @section scripts {
+        @Scripts.Render("~/bundles/knockout")
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/bundles/todo")
+    }
+}

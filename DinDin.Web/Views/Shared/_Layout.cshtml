@@ -11,23 +11,28 @@
     @Styles.Render("~/Content/css")
 </head>
 <body>
-    <div id="headline">
+    <div id="top">
+        <span id="logo">DinDin</span>
         <span id="userSettings">
             @Html.Partial("_UserSettings")
         </span>
     </div>
-
     <div id="body">
+        @if (@User.Identity.IsAuthenticated)
+        {
+            <div id="menu">
+                <ul>
+                    <li><a href="/ToDo">To Do</a></li>
+                    <li><a href="/Balance">Balance</a></li>
+                    <li><a href="/Expenses">Expenses</a></li>
+                    <li><a href="/Manage/Account">Manage</a></li>
+                </ul>
+            </div>       
+        }
         @RenderBody()
     </div>
 
     <footer>
-        <nav>
-            <ul id="menu">
-                <li>@Html.ActionLink("Todo List", "Index", "Home", new { area = "" }, null)</li>
-                <li>@Html.ActionLink("API", "Index", "Help", new { area = "HelpPage" }, null)</li>
-            </ul>
-        </nav>
         <p>&copy; @DateTime.Now.Year - DinDin Development Team</p>
     </footer>
 

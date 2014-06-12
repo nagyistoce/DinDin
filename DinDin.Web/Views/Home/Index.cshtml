@@ -1,6 +1,6 @@
 ﻿@model DinDin.Web.Models.LoginModel
 @{
-    ViewBag.Title = "My Todo List";
+    ViewBag.Title = "DinDin";
 }
 @functions{
     public string GetAntiForgeryToken()
@@ -12,80 +12,7 @@
 }
 
 <div id="main-content">
-    @if (@User.Identity.IsAuthenticated)
-    {
-        <div id="accordion">
-            <h3>To Do</h3>
-            <div style="min-height:300px">
-                <button data-bind="click: addTodoList" class="minibutton">Add Todo list</button>
-                <p class="error" data-bind="text: error"></p>
-                <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
-                <section id="lists" data-bind="foreach: todoLists, visible: todoLists().length > 0">
-                    <article class="todoList">
-                        <header>
-                            <form data-bind="validate: true">
-                                <input class="required" data-bind="value: title, selected: isEditingListTitle, blurOnEnter: true" />
-                            </form>
-                        </header>
-
-                        <a href="#" class="deletelist" data-bind="click: $parent.deleteTodoList">X</a>
-
-                        <ul data-bind="foreach: todos">
-                            <li>
-                                <input type="checkbox" data-bind="checked: isDone" />
-                                <input class="todoItemInput" type="text" data-bind="value: title, disable: isDone, blurOnEnter: true" />
-                                <a href="#" data-bind="click: $parent.deleteTodo">X</a>
-                                <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
-                            </li>
-                        </ul>
-
-                        <form data-bind="submit: addTodo">
-                            <input class="addTodo" type="text" data-bind="value: newTodoTitle, placeholder: 'Type here to add', blurOnEnter: true, event: { blur: addTodo }" />
-                        </form>
-
-                        <p class="error" data-bind="visible: errorMessage, text: errorMessage"></p>
-                    </article>
-                </section>
-            </div>
-            <h3>Expenses</h3>
-            <div>
-                <p>
-                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-    suscipit faucibus urna.
-                </p>
-            </div>
-            <h3>Balance</h3>
-            <div>
-                <p>
-                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-                </p>
-                <ul>
-                    <li>List item one</li>
-                    <li>List item two</li>
-                    <li>List item three</li>
-                </ul>
-            </div>
-            <h3>Manage</h3>
-            <div>
-                <p>
-                    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-                </p>
-                <p>
-                    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-                </p>
-            </div>
-        </div>
-    }
+    @if (@User.Identity.IsAuthenticated) { }
     else
     {
         <div class="todoList" id="loginPanel">
@@ -109,14 +36,5 @@
         @Scripts.Render("~/bundles/knockout")
         @Scripts.Render("~/bundles/jqueryval")
         @Scripts.Render("~/bundles/todo")
-        <script>
-            $(function () {
-                $("#accordion").accordion({
-                    animate: false,
-                    heightStyle: "fill",
-                    collapsible: true
-                });
-            });
-        </script>
     }
 }
